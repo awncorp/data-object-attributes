@@ -145,7 +145,7 @@ $builders->{use_builder} = fun($info, $name, $sub, @args) {
 
       my $class = $info->[1];
 
-      Carp::croak("has '$name' cannot 'use' method '$sub' via package '$class'");
+      Carp::confess("has '$name' cannot 'use' method '$sub' via package '$class'");
     };
 
     goto $point;
