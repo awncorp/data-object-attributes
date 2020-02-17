@@ -1,1 +1,15 @@
 Changelog for Data-Object-Attributes
+
+0.03 2020-02-17T04:41:24
+ - Added release updates
+ - Re-releasing to the CPAN
+
+0.02 2020-02-17T01:17:15
+ - Built release version 0.02
+ - Added release updates
+ - Use Carp::confess in builder
+
+0.01 2020-02-07T04:31:05
+ - Built release version 0.01
+ - Initial implementation
+ - Initial commit
