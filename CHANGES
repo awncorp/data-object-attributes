@@ -1,1 +1,10 @@
 Changelog for Data-Object-Attributes
+
+0.02 2020-02-17T01:17:14
+ - Added release updates
+ - Use Carp::confess in builder
+
+0.01 2020-02-07T04:31:05
+ - Built release version 0.01
+ - Initial implementation
+ - Initial commit
