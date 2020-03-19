@@ -1,6 +1,11 @@
 Changelog for Data-Object-Attributes
 
-0.04 2020-02-22T16:30:51
+0.05 2020-03-19T18:07:38
+ - Added release updates
+ - Fix test failures from documentation
+
+0.04 2020-02-22T16:30:52
+ - Built release version 0.04
  - Added release updates
  - Fix incorrect documentation
 
