@@ -44,6 +44,39 @@ This package supports the following scenarios:
 
 =cut
 
+=head2 has
+
+  package Example::Has;
+
+  use Moo;
+
+  has 'data' => (
+    is => 'ro',
+    isa => sub { die }
+  );
+
+  package Example::HasData;
+
+  use Moo;
+
+  use Data::Object::Attributes;
+
+  extends 'Example::Has';
+
+  has '+data' => (
+    is => 'ro',
+    isa => sub { 1 }
+  );
+
+  package main;
+
+  my $example = Example::HasData->new(data => time);
+
+This package supports the C<has> keyword function and all of its
+configurations. See the L<Moo> documentation for more details.
+
+=cut
+
 =head2 has-bld
 
   package Example::HasBld;
@@ -248,7 +281,7 @@ documentation for more details.
 
 =head2 has-mod
 
-  package Example::Has;
+  package Example::HasNomod;
 
   use Moo;
 
@@ -265,7 +298,7 @@ documentation for more details.
 
   use Data::Object::Attributes;
 
-  extends 'Example::Has';
+  extends 'Example::HasNomod';
 
   has data => (
     is => 'ro',
