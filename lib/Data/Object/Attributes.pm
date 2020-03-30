@@ -167,6 +167,8 @@ $builders->{wrt} = fun($info, $name, %opts) {
 fun options($info, $name, %opts) {
   %opts = (is => 'rw') unless %opts;
 
+  $opts{mod} = 1 if $name =~ s/^\+//;
+
   %opts = (%opts, $builders->{new}->($info, $name, %opts)) if defined $opts{new};
   %opts = (%opts, $builders->{bld}->($info, $name, %opts)) if defined $opts{bld};
   %opts = (%opts, $builders->{clr}->($info, $name, %opts)) if defined $opts{clr};
